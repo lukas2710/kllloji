@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Vidéo</title>
+    <style>
+        /* Style général du corps de la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Style du conteneur vidéo */
+        .video-container {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* Titre */
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Style du lecteur vidéo */
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-width: 100%;
+        }
+
+        /* Message d'erreur si la vidéo n'est pas supportée */
+        .no-video-message {
+            color: #555;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <h1>Lecture de vidéo</h1>
+        <video controls>
+            <source src="D:\Movies\serie\LA CASA DE PAPEL\LA.CASA.DE.PAPEL.S01.MULTI.1080P.10.BITS.WEBRIP-FROSTIES\LA.CASA.DE.PAPEL.S01.01.MULTI.1080P.10.BITS.WEBRIP-FROSTIES.mkv" type="video/mp4">
+            <p class="no-video-message">Désolé, votre navigateur ne supporte pas la lecture de vidéos.</p>
+        </video>
+    </div>
+</body>
+</html>
