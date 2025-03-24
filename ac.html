@@ -18,13 +18,15 @@
   <div class="header">
     <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
     <div class="main-title">
-      <h1>Les Films</h1>
-      <p>Découvrez une large sélection de films !</p>
+      <h1>Yamonfilm</h1>
+      <p></p>
     </div>
     <!-- Barre de recherche -->
-    <div class="search-container">
-      <input type="text" id="search-bar" placeholder="Rechercher un film ou une série...">
-      <button onclick="search()">Rechercher</button>
+     <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Rechercher un film..." oninput="showSuggestions()">
+      <button onclick="searchMovie()">Rechercher</button>
+      <div id="suggestions-list" class="suggestions"></div>
     </div>
   </div>
 
@@ -43,7 +45,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="movie-card" onclick="window.location.href='drame/after 1.html'">
+      <div class="movie-card" onclick="window.location.href='film/drame/after 1.html'">
         <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 3">
       </div>
     </div>
@@ -71,6 +73,10 @@
         <img src="https://via.placeholder.com/200x300" alt="Série 3">
       </div>
     </div>
+
+
+
+
     <div class="button-container">
       <button class="button" onclick="window.location.href='explore-series.html'">Explorer les séries</button>
     </div>

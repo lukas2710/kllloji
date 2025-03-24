@@ -3,276 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parcourir les Films - Yamonfilm</title>
+  <title>Accueil - Yamonfilm</title>
 
   <!-- Lien vers Google Fonts pour une police moderne -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* Réinitialisation des marges et du padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Police par défaut */
-    body {
-      background-color: #121212;
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* Conteneur principal */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* En-tête avec logo et titre */
-    .header {
-      width: 100%;
-      display: flex;
-      justify-content: center; /* Centrer le contenu de l'en-tête */
-      align-items: center;
-      flex-direction: column; /* Mettre le logo et le titre en colonne */
-      padding: 20px 50px;
-      background-color: #121212;
-    }
-
-    /* Logo */
-    .header img {
-      width: 250px; /* Taille du logo ajustée pour être bien visible */
-      height: auto;
-    }
-
-    /* Titre principal */
-    .main-title {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .main-title h1 {
-      font-size: 40px;
-      color: #00aaff;
-      font-weight: 600;
-    }
-
-    .main-title p {
-      font-size: 18px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    /* Navigation des catégories */
-    .categories {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-      gap: 30px;
-      position: sticky;
-      top: 0;
-      background-color: #121212;
-      padding: 10px 0;
-      z-index: 100;
-    }
-
-    .category {
-      font-size: 18px;
-      color: #fff;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-
-    .category:hover {
-      background-color: #00aaff;
-    }
-
-    /* Section de chaque catégorie */
-    .category-section {
-      margin-bottom: 50px;
-      padding: 20px;
-      background-color: #222;
-      border-radius: 10px;
-    }
-
-    .category-section h2 {
-      font-size: 30px;
-      color: #00aaff;
-      margin-bottom: 15px;
-    }
-
-    .movie-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .movie-card {
-      width: 200px;
-      height: 300px;
-      background-color: #333;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-
-    .movie-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .movie-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
-    }
-
-    /* Défilement fluide */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .movie-card {
-        width: 45%; /* 2 films par ligne */
-        height: 240px;
-      }
-
-      .category {
-        font-size: 16px;
-        padding: 8px 18px;
-      }
-
-      /* Réduire l'espacement entre les films pour les petits écrans */
-      .movie-list {
-        gap: 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .main-title h1 {
-        font-size: 30px;
-      }
-
-      .category {
-        font-size: 14px;
-        padding: 6px 15px;
-      }
-
-      .movie-card {
-        width: 45%; /* 2 films par ligne */
-        height: 220px;
-      }
-
-      .movie-list {
-        gap: 10px;
-      }
-    }
-  </style>
+  
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style ac.css">
 </head>
 <body>
 
-  <!-- Conteneur principal -->
-  <div class="container">
-
-    <!-- En-tête avec logo et titre -->
-    <div class="header">
-      <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
-      <div class="main-title">
-        <h1>Les Films</h1>
-        <p>Découvrez une large sélection de films !</p>
-      </div>
+  <!-- En-tête avec logo, titre et barre de recherche -->
+  <div class="header">
+    <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+    <div class="main-title">
+      <h1>Les Films</h1>
+      <p>Découvrez une large sélection de films !</p>
     </div>
 
-    <!-- Navigation des catégories -->
-    <div class="categories">
-      <div class="category" onclick="document.getElementById('action').scrollIntoView();">Action</div>
-      <div class="category" onclick="document.getElementById('comedy').scrollIntoView();">Comédie</div>
-      <div class="category" onclick="document.getElementById('horror').scrollIntoView();">Horreur</div>
-      <div class="category" onclick="document.getElementById('drama').scrollIntoView();">Drame</div>
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Rechercher un film..." oninput="showSuggestions()">
+      <button onclick="searchMovie()">Rechercher</button>
+      <div id="suggestions-list" class="suggestions"></div>
     </div>
-
-    <!-- Section Action -->
-    <div id="action" class="category-section">
-      <h2>Films Action</h2>
-      <div class="movie-list">
-        <div class="movie-card" onclick="window.location.href='charm city king.html'">
-          <img src="https://image.tmdb.org/t/p/original/9qp3fOzlUImJevdCJbAfl9A6yFI.jpg" alt="Film 1">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film2.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 2">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film3.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 3">
-        </div>
-      </div>
-    </div>
-
-    <!-- Section Comédie -->
-    <div id="comedy" class="category-section">
-      <h2>Films Comédie</h2>
-      <div class="movie-list">
-        <div class="movie-card" onclick="window.location.href='film/comedie/un petit truc en plus.html'">
-          <img src="https://fr.web.img6.acsta.net/pictures/24/03/01/11/14/2965930.jpg" alt="Film 4">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film5.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 5">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film6.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 6">
-        </div>
-      </div>
-    </div>
-
-    <!-- Section Horreur -->
-    <div id="horror" class="category-section">
-      <h2>Films Horreur</h2>
-      <div class="movie-list">
-        <div class="movie-card" onclick="window.location.href='the farm.html'">
-          <img src="https://fr.web.img5.acsta.net/pictures/18/10/24/15/18/1409655.jpg" alt="Film 7">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film8.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 8">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film9.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 9">
-        </div>
-      </div>
-    </div>
-
-    <!-- Section Drame -->
-    <div id="drama" class="category-section">
-      <h2>Films Drame</h2>
-      <div class="movie-list">
-        <div class="movie-card" onclick="window.location.href='after 1.html'">
-          <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 10">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film11.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 11">
-        </div>
-        <div class="movie-card" onclick="window.location.href='film12.html'">
-          <img src="https://via.placeholder.com/200x300" alt="Film 12">
-        </div>
-      </div>
-    </div>
-
   </div>
 
+  <!-- Barre de navigation en haut -->
+  <div class="nav-buttons">
+    <button onclick="window.location.href='#action'">Action</button>
+    <button onclick="window.location.href='#drame'">Drame</button>
+    <button onclick="window.location.href='#comedie'">Comédie</button>
+    <button onclick="window.location.href='#horreur'">Horreur</button>
+    <button onclick="window.location.href='#aventure'">Aventure</button>
+    <button onclick="window.location.href='#romance'">Romance</button>
+    <button onclick="window.location.href='#sciencefiction'">Science Fiction</button>
+    <button onclick="window.location.href='#animation'">Animation</button>
+  </div>
+
+  <!-- Section Action -->
+  <div id="action" class="container">
+    <h2>Action</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/action/charm city king.html'">
+        <img src="https://image.tmdb.org/t/p/original/9qp3fOzlUImJevdCJbAfl9A6yFI.jpg" alt="Charm city king">
+      </div>
+      <!-- Autres films Action ici -->
+    </div>
+  </div>
+
+  <!-- Section Drame -->
+  <div id="drame" class="container">
+    <h2>Drame</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/drame/after 1.html'">
+        <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 1">
+      </div>
+      <!-- Autres films Drame ici -->
+    </div>
+  </div>
+
+  <!-- Section Comédie -->
+  <div id="comedie" class="container">
+    <h2>Comédie</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/comedie/funny_movie.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+      </div>
+      <!-- Autres films Comédie ici -->
+    </div>
+  </div>
+
+  <!-- Section Horreur -->
+  <div id="horreur" class="container">
+    <h2>Horreur</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/horreur/haunting.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+      </div>
+      <!-- Autres films Horreur ici -->
+    </div>
+  </div>
+
+  <!-- Section Aventure -->
+  <div id="aventure" class="container">
+    <h2>Aventure</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/aventure/adventure_movie.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+      </div>
+      <!-- Autres films Aventure ici -->
+    </div>
+  </div>
+
+  <!-- Section Romance -->
+  <div id="romance" class="container">
+    <h2>Romance</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/romance/love_story.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+      </div>
+      <!-- Autres films Romance ici -->
+    </div>
+  </div>
+
+  <!-- Section Science Fiction -->
+  <div id="sciencefiction" class="container">
+    <h2>Science Fiction</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/sciencefiction/futuristic_movie.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+      </div>
+      <!-- Autres films Science Fiction ici -->
+    </div>
+  </div>
+
+  <!-- Section Animation -->
+  <div id="animation" class="container">
+    <h2>Animation</h2>
+    <div class="recent-movies">
+      <!-- Card 1 -->
+      <div class="movie-card" onclick="window.location.href='film/animation/toy_story.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+      </div>
+      <!-- Autres films Animation ici -->
+    </div>
+  </div>
+
+  <!-- Lien vers le fichier JavaScript externe -->
+  <script src="script.js"></script>
 </body>
 </html>
