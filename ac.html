@@ -7,223 +7,24 @@
 
   <!-- Lien vers Google Fonts pour une police moderne -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style ac.css">
 
-  <style>
-    /* Réinitialisation des marges et du padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Police par défaut */
-    body {
-      background-color: #121212; /* Fond sombre */
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-    }
-
-    /* Conteneur principal */
-    .container {
-      text-align: center;
-      padding: 50px 20px;
-      width: 100%;
-    }
-
-    /* En-tête avec logo et titre */
-    .header {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 20px 50px;
-      background-color: #121212;
-    }
-
-    /* Logo */
-    .header img {
-      width: 250px; /* Taille du logo ajustée pour être bien visible */
-      height: auto;
-    }
-
-    /* Titre principal */
-    .main-title {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .main-title h1 {
-      font-size: 40px;
-      color: #00aaff;
-      font-weight: 600;
-    }
-
-    .main-title p {
-      font-size: 18px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    /* Boutons pour explorer films et séries */
-    .button-container {
-      margin-top: 20px;
-    }
-
-    .button {
-      padding: 12px 30px;
-      background-color: #00aaff;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      margin: 10px;
-    }
-
-    .button:hover {
-      background-color: #0099e0;
-      transform: translateY(-5px);
-    }
-
-    /* Section des films populaires */
-    .recent-movies {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 50px;
-    }
-
-    .movie-card {
-      width: 200px;
-      height: 300px;
-      background-color: #222;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-
-    .movie-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .movie-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
-    }
-
-    /* Section des séries populaires */
-    .recent-series {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 50px;
-    }
-
-    .series-card {
-      width: 200px;
-      height: 300px;
-      background-color: #222;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-
-    .series-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .series-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 30px;
-      }
-
-      .recent-movies, .recent-series {
-        gap: 15px;
-      }
-
-      .movie-card, .series-card {
-        width: 160px;
-        height: 240px;
-      }
-
-      .button {
-        font-size: 16px;
-        padding: 10px 25px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      /* Pour les petits écrans, comme les téléphones mobiles */
-      h1 {
-        font-size: 24px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      .movie-card, .series-card {
-        width: 140px;
-        height: 210px;
-      }
-
-      .button {
-        font-size: 14px;
-        padding: 8px 20px;
-      }
-    }
-
-    /* Pour les TV et grands écrans */
-    @media (min-width: 1200px) {
-      .recent-movies, .recent-series {
-        gap: 40px;
-      }
-
-      .movie-card, .series-card {
-        width: 300px;
-        height: 450px;
-      }
-
-      h1 {
-        font-size: 50px;
-      }
-
-      .button {
-        font-size: 20px;
-        padding: 15px 40px;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- En-tête avec logo et titre -->
+  <!-- En-tête avec logo, titre et barre de recherche -->
   <div class="header">
     <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
     <div class="main-title">
       <h1>Les Films</h1>
       <p>Découvrez une large sélection de films !</p>
+    </div>
+    <!-- Barre de recherche -->
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Rechercher un film ou une série...">
+      <button onclick="search()">Rechercher</button>
     </div>
   </div>
 
@@ -242,7 +43,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="movie-card" onclick="window.location.href='film/drame/after 1.html'">
+      <div class="movie-card" onclick="window.location.href='drame/after 1.html'">
         <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 3">
       </div>
     </div>
@@ -275,5 +76,7 @@
     </div>
   </div>
 
+  <!-- Lien vers le fichier JavaScript externe -->
+  <script src="script.js"></script>
 </body>
 </html>

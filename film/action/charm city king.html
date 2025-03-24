@@ -4,194 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regarder un film - Yamonfilm</title>
-
+  
   <!-- Lien vers Google Fonts pour une police moderne -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    /* Réinitialisation des marges et du padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Police par défaut */
-    body {
-      background-color: #121212; /* Fond sombre */
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* Conteneur principal */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* En-tête avec logo et titre */
-    .header {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 20px 50px;
-      background-color: #121212;
-    }
-
-    /* Agrandir le logo, mais de manière plus raisonnable */
-    .header img {
-      width: 250px; /* Taille du logo ajustée pour être bien visible */
-      height: auto;
-    }
-
-    /* Titre du film */
-    .movie-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .movie-title h1 {
-      font-size: 40px;
-      color: #00aaff;
-      font-weight: 600;
-    }
-
-    .movie-title p {
-      font-size: 18px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    /* Section de la description et de l'image du film */
-    .movie-info {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
-
-    /* Image du film */
-    .movie-info img {
-      width: 300px;
-      height: 450px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-    }
-
-    /* Description du film */
-    .movie-description {
-      max-width: 60%;
-      padding-left: 20px;
-    }
-
-    .movie-description h2 {
-      font-size: 24px;
-      color: #00aaff;
-      margin-bottom: 10px;
-    }
-
-    .movie-description p {
-      font-size: 16px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    /* Lecteur vidéo */
-    .video-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* Ratio 16:9 pour le lecteur vidéo */
-      background-color: #000;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Bouton pour revenir à la page précédente */
-    .back-button {
-      text-align: center;
-    }
-
-    .back-button a {
-      text-decoration: none;
-      padding: 12px 30px;
-      background-color: #00aaff;
-      color: #fff;
-      border-radius: 30px;
-      font-size: 18px;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .back-button a:hover {
-      background-color: #0099e0;
-      transform: translateY(-5px);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .movie-info {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .movie-info img {
-        width: 80%;
-        height: auto;
-      }
-
-      .movie-description {
-        max-width: 100%;
-        padding-left: 0;
-        text-align: center;
-      }
-
-      .movie-description h2 {
-        font-size: 20px;
-      }
-
-      .movie-description p {
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .movie-title h1 {
-        font-size: 24px;
-      }
-
-      .movie-title p {
-        font-size: 14px;
-      }
-
-      .back-button a {
-        font-size: 14px;
-        padding: 10px 25px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../../style.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
 
@@ -200,25 +17,28 @@
 
     <!-- En-tête avec logo et titre -->
     <div class="header">
-      <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
-      <div class="main-title"></div>
+      <img src="img/logo.png" alt="Yamonfilm Logo">
+    </div>
+
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Rechercher un film..." oninput="showSuggestions()">
+      <button onclick="searchMovie()">Rechercher</button>
+      <div id="suggestions-list" class="suggestions"></div>
     </div>
 
     <!-- Titre du film -->
     <div class="movie-title">
       <h1>Charm City Kings</h1>
-      <p>Un adolescent rêve de rejoindre une équipe de motards dans la ville de Baltimore, mais ses rêves risquent de se heurter à la réalité de la rue.</p>
+      <p>Suivez l'histoire de Mouse, un adolescent à la recherche d'une vie meilleure à Baltimore.</p>
     </div>
 
     <!-- Section de la description et de l'image du film -->
     <div class="movie-info">
-      <!-- Image du film -->
-      <img src="https://m.media-amazon.com/images/S/pv-target-images/20f3a9ff12c66fb2df59f4a7710d2b3b02b209f0d3d3a9b8748056c369bd4a0e.jpg" alt="Charm City Kings">
-
-      <!-- Description du film -->
+      <img src="https://image.tmdb.org/t/p/original/9qp3fOzlUImJevdCJbAfl9A6yFI.jpg" alt="Charm City Kings">
       <div class="movie-description">
         <h2>À propos du film</h2>
-        <p>"Charm City Kings" raconte l’histoire de Mouse, un adolescent de Baltimore, qui rêve de rejoindre les "Midnight Clique", un gang de motards. Tandis qu'il se bat pour suivre son rêve, il se retrouve pris entre son désir de rejoindre cette équipe et la réalité des dangers qui l'entourent. Le film explore les thèmes de la jeunesse, de la violence, et des choix de vie qui façonnent l'avenir de chacun.</p>
+        <p>"Charm City Kings" suit Mouse, un adolescent qui rêve de faire partie d'un club de motos tout en cherchant sa propre identité et sa place dans un environnement difficile à Baltimore. Le film aborde des thèmes de l'amitié, des rêves, et de la tentation des mauvaises voies. C'est un drame poignant sur la jeunesse et les choix difficiles qu'ils doivent faire.</p>
       </div>
     </div>
 
@@ -229,9 +49,12 @@
 
     <!-- Bouton pour revenir à la page précédente -->
     <div class="back-button">
-      <a href="ac.html">Retour à l'accueil</a>
+      <a href="../../ac.html">Retour à l'accueil</a>
     </div>
+
   </div>
+
+  <script src="../../script.js"></script> <!-- Lien vers le fichier JavaScript -->
 
 </body>
 </html>
