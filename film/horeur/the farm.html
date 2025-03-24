@@ -38,6 +38,24 @@
       padding: 20px;
     }
 
+    /* En-tête avec logo et titre */
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 50px;
+      background-color: #121212;
+    }
+
+    /* Agrandir le logo, mais de manière plus raisonnable */
+    .header img {
+      width: 250px; /* Taille du logo ajustée pour être bien visible */
+      height: auto;
+    }
+
+
     /* Titre du film */
     .movie-title {
       text-align: center;
@@ -180,6 +198,13 @@
 
   <!-- Conteneur principal -->
   <div class="container">
+
+
+    <!-- En-tête avec logo et titre -->
+  <div class="header">
+    <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+    <div class="main-title"></div>
+  </div>
 
     <!-- Titre du film -->
     <div class="movie-title">
