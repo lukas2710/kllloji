@@ -95,7 +95,6 @@
     /* Section des films populaires */
     .recent-movies {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
       margin-top: 50px;
@@ -126,7 +125,6 @@
     /* Section des séries populaires */
     .recent-series {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
       margin-top: 50px;
@@ -222,12 +220,11 @@
 
   <!-- En-tête avec logo et titre -->
   <div class="header">
-    <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
     <div class="main-title">
       <h1>Bienvenue sur Yamonfilm</h1>
       <p>Le meilleur endroit pour regarder vos films et séries préférés en streaming, gratuitement et sans publicité. Rejoignez-nous et plongez dans un monde de divertissement sans limites !</p>
     </div>
-    
+  </div>
 
   <!-- Films populaires -->
   <div class="container">
@@ -248,11 +245,11 @@
         <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 3">
       </div>
     </div>
+    <div class="button-container">
+      <button class="button" onclick="window.location.href='explore-films.html'">Explorer les films</button>
+    </div>
   </div>
-  <div class="button-container">
- <button class="button" onclick="window.location.href='explore-series.html'">Explorer les films</button>
- </div>
-  </div>
+
   <!-- Séries populaires -->
   <div class="container">
     <h2>Séries Populaires</h2>
@@ -271,13 +268,11 @@
       <div class="series-card" onclick="window.location.href='series3.html'">
         <img src="https://via.placeholder.com/200x300" alt="Série 3">
       </div>
-
-      
+    </div>
+    <div class="button-container">
+      <button class="button" onclick="window.location.href='explore-series.html'">Explorer les séries</button>
     </div>
   </div>
-  <div class="button-container">
- <button class="button" onclick="window.location.href='explore-series.html'">Explorer les séries</button>
- </div>
-  </div>
+
 </body>
 </html>
