@@ -115,6 +115,15 @@ body {
   padding: 10px;
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.suggestions div img {
+  width: 40px; /* Limite la largeur de l'image */
+  height: 40px; /* Limite la hauteur de l'image */
+  margin-right: 10px; /* Espacement entre l'image et le texte */
+  object-fit: cover; /* Maintient le ratio de l'image */
 }
 
 .suggestions div:hover {
@@ -264,6 +273,11 @@ button:hover {
   .search-bar input[type="text"] {
     width: 70%; /* Ajuste la largeur sur mobile */
   }
+
+  .suggestions div img {
+    width: 30px; /* Réduit la taille de l'image sur mobile */
+    height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -287,6 +301,11 @@ button:hover {
 
   .search-bar input[type="text"] {
     width: 60%; /* Plus petit sur les très petits écrans */
+  }
+
+  .suggestions div img {
+    width: 25px; /* Encore plus petit sur les petits écrans */
+    height: 25px;
   }
 }
 
@@ -312,5 +331,10 @@ button:hover {
 
   .search-bar input[type="text"] {
     width: 50%; /* Taille raisonnable sur les grands écrans */
+  }
+
+  .suggestions div img {
+    width: 40px; /* Réajuste l'image de suggestion sur les grands écrans */
+    height: 40px;
   }
 }
