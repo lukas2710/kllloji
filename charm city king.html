@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regarder un film - Yamonfilm</title>
+
+  <!-- Lien vers Google Fonts pour une police moderne -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Réinitialisation des marges et du padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Police par défaut */
+    body {
+      background-color: #121212; /* Fond sombre */
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Conteneur principal */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Titre du film */
+    .movie-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .movie-title h1 {
+      font-size: 40px;
+      color: #00aaff;
+      font-weight: 600;
+    }
+
+    .movie-title p {
+      font-size: 18px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Lecteur vidéo */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* Ratio 16:9 pour le lecteur vidéo */
+      background-color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Section des informations supplémentaires */
+    .info-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .info-container h2 {
+      font-size: 24px;
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .info-container p {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Bouton pour revenir à la page précédente */
+    .back-button {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      padding: 12px 30px;
+      background-color: #00aaff;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-button a:hover {
+      background-color: #0099e0;
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .movie-title h1 {
+        font-size: 30px;
+      }
+
+      .movie-title p {
+        font-size: 16px;
+      }
+
+      .info-container h2 {
+        font-size: 20px;
+      }
+
+      .info-container p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .movie-title h1 {
+        font-size: 24px;
+      }
+
+      .movie-title p {
+        font-size: 14px;
+      }
+
+      .info-container h2 {
+        font-size: 18px;
+      }
+
+      .info-container p {
+        font-size: 12px;
+      }
+
+      .back-button a {
+        font-size: 14px;
+        padding: 10px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+
+    <!-- Titre du film -->
+    <div class="movie-title">
+      <h1>Film: Charm City Kings</h1>
+      <p>Regardez maintenant le film "Charm City Kings" en streaming. Profitez de l'expérience sans publicité et plongez dans l'univers de ce film incroyable !</p>
+    </div>
+
+    <!-- Lecteur vidéo -->
+    <div class="video-container">
+      <!-- Remplacez le lien par le lien de votre lecteur vidéo (YouTube, Vimeo, ou un lecteur personnalisé) -->
+     <iframe src="https://luluvdo.com/e/cihkfm3yfgf5" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </div>
+
+    <!-- Informations supplémentaires -->
+    <div class="info-container">
+      <h2>À propos de ce film</h2>
+      <p>Charm City Kings est un drame américain qui raconte l'histoire de Mouse, un adolescent de Baltimore, qui rêve de rejoindre une équipe de moto tout-terrain légendaire. Un film captivant avec des thèmes de loyauté, de famille et de prise de décisions dans un environnement difficile.</p>
+    </div>
+
+    <!-- Bouton pour revenir à la page précédente -->
+    <div class="back-button">
+      <a href="ac.html">Retour à l'accueil</a>
+    </div>
+  </div>
+
+</body>
+</html>
