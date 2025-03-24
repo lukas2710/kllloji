@@ -92,10 +92,10 @@
       line-height: 1.6;
     }
 
-    /* Section de la description et de l'image du film */
+   /* Section de la description et de l'image du film */
     .movie-info {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 30px;
@@ -103,31 +103,27 @@
 
     /* Image du film */
     .movie-info img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
+      width: 300px;
+      height: 450px;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-      margin-bottom: 20px;
-      margin-left: 150px; /* Ajoutez cette ligne pour décaler l'image à droite */
     }
 
     /* Description du film */
     .movie-description {
       max-width: 60%;
       padding-left: 20px;
-      text-align: left;
     }
 
     .movie-description h2 {
-      font-size: 2rem;
+      font-size: 24px;
       color: #00aaff;
       margin-bottom: 10px;
     }
 
     .movie-description p {
-      font-size: 1.1rem;
+      font-size: 16px;
       color: #ccc;
       line-height: 1.6;
     }
@@ -143,7 +139,7 @@
       overflow: hidden;
       margin-bottom: 20px;
     }
-
+    
     .video-container iframe {
       position: absolute;
       top: 0;
