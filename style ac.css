@@ -65,22 +65,9 @@ body {
   justify-content: center;
   margin-bottom: 30px;
   position: relative;
-}
-
-/* CSS pour l'image de la suggestion */
-.suggestions div {
+  width: 100%; /* S'adapte à la largeur de l'écran */
+  max-width: 600px; /* Limite la largeur de la barre de recherche */
   padding: 10px;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.suggestions div img {
-  width: 40px; /* Limite la largeur de l'image */
-  height: 40px; /* Limite la hauteur de l'image */
-  margin-right: 10px; /* Espacement entre l'image et le texte */
-  object-fit: cover; /* Maintient le ratio de l'image */
 }
 
 .search-bar input[type="text"] {
@@ -88,8 +75,7 @@ body {
   font-size: 16px;
   border: 2px solid #00aaff;
   border-radius: 30px;
-  width: 300px;
-  margin-right: 10px;
+  width: 80%; /* Prend 80% de la largeur de la barre de recherche */
   background-color: #1a1a1a;
   color: #fff;
 }
@@ -103,6 +89,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  margin-left: 10px;
 }
 
 .search-bar button:hover {
@@ -273,6 +260,10 @@ button:hover {
     font-size: 16px;
     padding: 10px 25px;
   }
+
+  .search-bar input[type="text"] {
+    width: 70%; /* Ajuste la largeur sur mobile */
+  }
 }
 
 @media (max-width: 480px) {
@@ -292,6 +283,10 @@ button:hover {
   button {
     font-size: 14px;
     padding: 8px 20px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 60%; /* Plus petit sur les très petits écrans */
   }
 }
 
@@ -313,5 +308,9 @@ button:hover {
   button {
     font-size: 20px;
     padding: 15px 40px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 50%; /* Taille raisonnable sur les grands écrans */
   }
 }
