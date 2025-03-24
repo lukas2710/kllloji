@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regarder un film - Yamonfilm</title>
+
+  <!-- Lien vers Google Fonts pour une police moderne -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Réinitialisation des marges et du padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Police par défaut */
+    body {
+      background-color: #121212; /* Fond sombre */
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Conteneur principal */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Titre du film */
+    .movie-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .movie-title h1 {
+      font-size: 40px;
+      color: #00aaff;
+      font-weight: 600;
+    }
+
+    .movie-title p {
+      font-size: 18px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Section de la description et de l'image du film */
+    .movie-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    /* Image du film */
+    .movie-info img {
+      width: 300px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+    }
+
+    /* Description du film */
+    .movie-description {
+      max-width: 60%;
+      padding-left: 20px;
+    }
+
+    .movie-description h2 {
+      font-size: 24px;
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .movie-description p {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Lecteur vidéo */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* Ratio 16:9 pour le lecteur vidéo */
+      background-color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Bouton pour revenir à la page précédente */
+    .back-button {
+      text-align: center;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      padding: 12px 30px;
+      background-color: #00aaff;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-button a:hover {
+      background-color: #0099e0;
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .movie-info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .movie-info img {
+        width: 80%;
+        height: auto;
+      }
+
+      .movie-description {
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .movie-description h2 {
+        font-size: 20px;
+      }
+
+      .movie-description p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .movie-title h1 {
+        font-size: 24px;
+      }
+
+      .movie-title p {
+        font-size: 14px;
+      }
+
+      .back-button a {
+        font-size: 14px;
+        padding: 10px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+
+    <!-- Titre du film -->
+    <div class="movie-title">
+      <h1>The Farm</h1>
+    </div>
+
+    <!-- Section de la description et de l'image du film -->
+    <div class="movie-info">
+      <!-- Image du film -->
+      <img src="https://fr.web.img5.acsta.net/pictures/18/10/24/15/18/1409655.jpg" alt="The Farm">
+
+      <!-- Description du film -->
+      <div class="movie-description">
+        <h2>À propos du film</h2>
+        <p>Dans "The Farm", un couple se retrouve pris en otage dans une ferme isolée, où ils sont contraints de vivre une expérience de survie extrême. En découvrant un monde parallèle où les règles de la société sont totalement renversées, ils se retrouvent à lutter non seulement pour leur vie, mais aussi pour leurs principes et leur liberté. Un thriller haletant qui pousse les personnages à leurs limites.</p>
+      </div>
+    </div>
+
+    <!-- Lecteur vidéo -->
+    <div class="video-container">
+      <!-- Remplacez le lien par le lien de votre lecteur vidéo (YouTube, Vimeo, ou un lecteur personnalisé) -->
+     <iframe src="https://luluvdo.com/e/pnq4z4smgek8" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </div>
+
+    <!-- Bouton pour revenir à la page précédente -->
+    <div class="back-button">
+      <a href="ac.html">Retour à l'accueil</a>
+    </div>
+  </div>
+
+</body>
+</html>
