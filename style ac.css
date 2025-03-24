@@ -226,13 +226,21 @@ button:hover {
   box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
 }
 
-/* Barre de navigation */
+/* Barre de navigation fixe */
 .nav-buttons {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
   gap: 15px;
   flex-wrap: wrap; /* Pour permettre à la barre de navigation de s'ajuster sur des écrans plus petits */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  padding: 10px 0;
+  z-index: 1000; /* Assure que la barre est toujours au-dessus du contenu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-buttons button {
@@ -248,6 +256,11 @@ button:hover {
 
 .nav-buttons button:hover {
   background-color: #0099e0;
+}
+
+/* Ajout de marge pour le contenu afin qu'il ne soit pas masqué sous la barre de navigation */
+body {
+  padding-top: 80px; /* Ajustez la valeur en fonction de la hauteur de la barre de navigation */
 }
 
 /* Responsive Design */
