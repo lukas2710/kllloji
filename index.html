@@ -1,63 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture Vidéo</title>
-    <style>
-        /* Style général du corps de la page */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'accueil - Yamonfilm</title>
 
-        /* Style du conteneur vidéo */
-        .video-container {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-            max-width: 700px;
-            width: 100%;
-        }
+  <!-- Lien vers Google Fonts pour une police moderne -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        /* Titre */
-        h1 {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
+  <style>
+    /* Réinitialisation des marges et du padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Style du lecteur vidéo */
-        video {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            max-width: 100%;
-        }
+    /* Police par défaut */
+    body {
+      background-color: #121212; /* Fond sombre plus agréable */
+      font-family: 'Poppins', sans-serif; /* Police moderne */
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
 
-        /* Message d'erreur si la vidéo n'est pas supportée */
-        .no-video-message {
-            color: #555;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-    </style>
+    /* Conteneur principal */
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    /* Style pour le carré */
+    .box {
+      background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec un peu de transparence */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 255, 0.6); /* Ombres bleues pour un effet lumineux */
+      transition: all 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      box-shadow: 0 0 40px rgba(0, 0, 255, 0.9); /* Amplification de l'effet au survol */
+      transform: scale(1.05);
+    }
+
+    /* Titre avec plus de style */
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Style pour le texte descriptif */
+    p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* Style pour le bouton */
+    button {
+      padding: 12px 30px;
+      background-color: #00aaff; /* Couleur bleue plus attrayante */
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    button:hover {
+      background-color: #0099e0;
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+      }
+      
+      button {
+        font-size: 16px;
+        padding: 10px 25px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="video-container">
-        <h1>Lecture de vidéo</h1>
-        <video controls>
-            <source src="0307.mp4" type="video/mp4">
-            <p class="no-video-message">Désolé, votre navigateur ne supporte pas la lecture de vidéos.</p>
-        </video>
+  <div class="container">
+    <div class="box">
+      <h1>Bienvenue sur Yamonfilm</h1>
+      <p>Pour profiter d'une expérience sans pub, utilisez le navigateur Brave, 100% gratuit et rapide !</p>
+      <button onclick="redirectToPage()">Accéder à Yamonfilm</button>
     </div>
+  </div>
+
+  <script>
+    // Fonction pour rediriger vers une autre page de ton site
+    function redirectToPage() {
+      window.location.href = "ac.html"; // Page du même répertoire
+    }
+  </script>
 </body>
 </html>
