@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regarder le film - Charm City Kings</title>
+  <title>Regarder un film - Yamonfilm</title>
 
   <!-- Lien vers Google Fonts pour une police moderne -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -25,17 +25,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
 
     /* Conteneur principal */
     .container {
       width: 100%;
       max-width: 1200px;
-      padding: 20px;
       margin: 0 auto;
+      padding: 20px;
     }
 
     /* En-tête avec logo et titre */
@@ -55,25 +55,6 @@
       height: auto;
     }
 
-    .menu {
-      display: flex;
-      gap: 30px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      padding: 10px 20px;
-      background-color: #444;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .menu a:hover {
-      background-color: #666;
-    }
-
     /* Titre du film */
     .movie-title {
       text-align: center;
@@ -81,13 +62,13 @@
     }
 
     .movie-title h1 {
-      font-size: 4vw; /* Taille responsive */
+      font-size: 40px;
       color: #00aaff;
       font-weight: 600;
     }
 
     .movie-title p {
-      font-size: 2vw;
+      font-size: 18px;
       color: #ccc;
       line-height: 1.6;
     }
@@ -95,7 +76,7 @@
     /* Section de la description et de l'image du film */
     .movie-info {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 30px;
@@ -103,31 +84,27 @@
 
     /* Image du film */
     .movie-info img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
+      width: 300px;
+      height: 450px;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-      margin-bottom: 20px;
-      margin-left: 150px; /* Ajoutez cette ligne pour décaler l'image à droite */
     }
 
     /* Description du film */
     .movie-description {
       max-width: 60%;
       padding-left: 20px;
-      text-align: left;
     }
 
     .movie-description h2 {
-      font-size: 2rem;
+      font-size: 24px;
       color: #00aaff;
       margin-bottom: 10px;
     }
 
     .movie-description p {
-      font-size: 1.1rem;
+      font-size: 16px;
       color: #ccc;
       line-height: 1.6;
     }
@@ -156,7 +133,6 @@
     /* Bouton pour revenir à la page précédente */
     .back-button {
       text-align: center;
-      margin-top: 20px;
     }
 
     .back-button a {
@@ -172,47 +148,6 @@
     .back-button a:hover {
       background-color: #0099e0;
       transform: translateY(-5px);
-    }
-
-    /* Section Films similaires */
-    .suggestions {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .suggestions h2 {
-      font-size: 2rem;
-      color: #00aaff;
-      margin-bottom: 20px;
-    }
-
-    /* Grille des films similaires */
-    .suggestions-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      justify-items: center;
-      direction: ltr; /* Grille de gauche à droite */
-    }
-
-    .suggested-movie {
-      width: 100%;
-      max-width: 220px;
-      text-align: center;
-    }
-
-    .suggested-movie img {
-      width: 100%;
-      height: 330px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
-    }
-
-    .suggested-movie h3 {
-      font-size: 1.1rem;
-      color: #00aaff;
-      margin-top: 10px;
     }
 
     /* Responsive Design */
@@ -234,27 +169,17 @@
       }
 
       .movie-description h2 {
-        font-size: 1.6rem;
+        font-size: 20px;
       }
 
       .movie-description p {
-        font-size: 1rem;
-      }
-
-      .menu {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-      }
-
-      .menu a {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
 
     @media (max-width: 480px) {
       .movie-title h1 {
-        font-size: 30px; /* Ajustement pour petits écrans */
+        font-size: 24px;
       }
 
       .movie-title p {
@@ -265,59 +190,46 @@
         font-size: 14px;
         padding: 10px 25px;
       }
-
-      .suggestions h2 {
-        font-size: 1.5rem;
-      }
-
-      .suggested-movie img {
-        height: 200px; /* Ajustement des images pour petits écrans */
-      }
-
-      .suggested-movie h3 {
-        font-size: 1rem;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- En-tête avec logo et titre -->
-  <div class="header">
-    <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
-    <div class="main-title"></div>
-  </div>
+  <!-- Conteneur principal -->
+  <div class="container">
 
-  <!-- Titre du film -->
-  <div class="movie-title">
-    <h1>Charm City Kings</h1>
-    <p>Un drame qui raconte l'histoire d'un adolescent qui rêve de rejoindre un gang de moto de la rue à Baltimore.</p>
-  </div>
-
-  <!-- Section de la description et de l'image du film -->
-  <div class="movie-info">
-    <!-- Image du film -->
-    <img src="https://m.media-amazon.com/images/S/pv-target-images/20f3a9ff12c66fb2df59f4a7710d2b3b02b209f0d3d3a9b8748056c369bd4a0e.jpg" alt="Charm City Kings">
-
-    <!-- Description du film -->
-    <div class="movie-description">
-      <h2>À propos du film</h2>
-      <p>"Charm City Kings" raconte l'histoire de Mouse, un adolescent de Baltimore, qui rêve de rejoindre les Hell Runners, un gang de motos urbaines. Alors qu'il tente de gagner leur respect, il se heurte aux réalités de la rue, de la loyauté et de la violence. Avec un avenir incertain, Mouse devra choisir entre la loyauté envers les siens et un avenir meilleur loin du chaos. Ce film est un regard poignant sur la vie dans la ville et les sacrifices que les jeunes font pour appartenir.</p>
+    <!-- En-tête avec logo et titre -->
+    <div class="header">
+      <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+      <div class="main-title"></div>
     </div>
-  </div>
 
-  <!-- Lecteur vidéo -->
-  <div class="video-container">
-   <iframe src="https://luluvdo.com/e/cihkfm3yfgf5" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-  </div>
+    <!-- Titre du film -->
+    <div class="movie-title">
+      <h1>Charm City Kings</h1>
+      <p>Un adolescent rêve de rejoindre une équipe de motards dans la ville de Baltimore, mais ses rêves risquent de se heurter à la réalité de la rue.</p>
+    </div>
 
-  <!-- Bouton pour revenir à la page précédente -->
-  <div class="back-button">
-    <a href="../../ac.html">Retour à l'accueil</a>
-  </div>
+    <!-- Section de la description et de l'image du film -->
+    <div class="movie-info">
+      <!-- Image du film -->
+      <img src="https://m.media-amazon.com/images/S/pv-target-images/20f3a9ff12c66fb2df59f4a7710d2b3b02b209f0d3d3a9b8748056c369bd4a0e.jpg" alt="Charm City Kings">
 
- 
-      <!-- Ajoutez d'autres films similaires ici -->
+      <!-- Description du film -->
+      <div class="movie-description">
+        <h2>À propos du film</h2>
+        <p>"Charm City Kings" raconte l’histoire de Mouse, un adolescent de Baltimore, qui rêve de rejoindre les "Midnight Clique", un gang de motards. Tandis qu'il se bat pour suivre son rêve, il se retrouve pris entre son désir de rejoindre cette équipe et la réalité des dangers qui l'entourent. Le film explore les thèmes de la jeunesse, de la violence, et des choix de vie qui façonnent l'avenir de chacun.</p>
+      </div>
+    </div>
+
+    <!-- Lecteur vidéo -->
+    <div class="video-container">
+      <iframe src="https://luluvdo.com/e/cihkfm3yfgf5" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </div>
+
+    <!-- Bouton pour revenir à la page précédente -->
+    <div class="back-button">
+      <a href="ac.html">Retour à l'accueil</a>
     </div>
   </div>
 
