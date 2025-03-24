@@ -38,6 +38,40 @@
       padding: 20px;
     }
 
+    /* En-tête avec logo et menu */
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; /* Espace entre logo et menu */
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    /* Agrandir le logo, mais de manière plus raisonnable */
+    .header img {
+      width: 250px; /* Taille du logo ajustée pour être bien visible */
+      height: auto;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #444;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #666;
+    }
+
     /* Titre du film */
     .movie-title {
       text-align: center;
@@ -181,10 +215,19 @@
   <!-- Conteneur principal -->
   <div class="container">
 
+    <!-- En-tête avec logo et menu -->
+    <div class="header">
+      <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+      <div class="menu">
+        <a href="#">Films</a>
+        <a href="#">Séries</a>
+      </div>
+    </div>
+
     <!-- Titre du film -->
     <div class="movie-title">
       <h1>Charm City Kings</h1>
-      
+      <p>Un drame intense sur un adolescent en quête de sens dans la vie et d'ascension sociale dans les rues de Baltimore.</p>
     </div>
 
     <!-- Section de la description et de l'image du film -->
@@ -202,7 +245,7 @@
     <!-- Lecteur vidéo -->
     <div class="video-container">
       <!-- Remplacez le lien par le lien de votre lecteur vidéo (YouTube, Vimeo, ou un lecteur personnalisé) -->
-     <iframe src="https://luluvdo.com/e/cihkfm3yfgf5" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+      <iframe src="https://luluvdo.com/e/cihkfm3yfgf5" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
     </div>
 
     <!-- Bouton pour revenir à la page précédente -->

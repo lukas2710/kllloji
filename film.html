@@ -38,10 +38,27 @@
       padding: 20px;
     }
 
+    /* En-tête avec logo et titre */
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: center; /* Centrer le contenu de l'en-tête */
+      align-items: center;
+      flex-direction: column; /* Mettre le logo et le titre en colonne */
+      padding: 20px 50px;
+      background-color: #121212;
+    }
+
+    /* Logo */
+    .header img {
+      width: 250px; /* Taille du logo ajustée pour être bien visible */
+      height: auto;
+    }
+
     /* Titre principal */
     .main-title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-top: 20px;
     }
 
     .main-title h1 {
@@ -174,10 +191,13 @@
   <!-- Conteneur principal -->
   <div class="container">
 
-    <!-- Titre principal -->
-    <div class="main-title">
-      <h1>Parcourez les Films</h1>
-      <p>Découvrez une large sélection de films répartis par catégories. Cliquez sur une catégorie pour explorer les films de cette catégorie.</p>
+    <!-- En-tête avec logo et titre -->
+    <div class="header">
+      <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+      <div class="main-title">
+        <h1>Les Films</h1>
+        <p>Découvrez une large sélection de films !</p>
+      </div>
     </div>
 
     <!-- Navigation des catégories -->

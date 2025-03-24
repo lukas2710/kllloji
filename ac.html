@@ -35,26 +35,42 @@
       width: 100%;
     }
 
-    /* En-tête avec titre et description */
+    /* En-tête avec logo et titre */
     .header {
-      margin-bottom: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 50px;
+      background-color: #121212;
     }
 
-    h1 {
+    /* Logo */
+    .header img {
+      width: 250px; /* Taille du logo ajustée pour être bien visible */
+      height: auto;
+    }
+
+    /* Titre principal */
+    .main-title {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .main-title h1 {
       font-size: 40px;
       color: #00aaff;
-      margin-bottom: 10px;
       font-weight: 600;
     }
 
-    p {
+    .main-title p {
       font-size: 18px;
       color: #ccc;
-      margin-bottom: 20px;
       line-height: 1.6;
     }
 
-    /* Bouton pour accéder aux films */
+    /* Boutons pour explorer films et séries */
     .button-container {
       margin-top: 20px;
     }
@@ -68,6 +84,7 @@
       font-size: 18px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+      margin: 10px;
     }
 
     .button:hover {
@@ -75,7 +92,7 @@
       transform: translateY(-5px);
     }
 
-    /* Section des films récents */
+    /* Section des films populaires */
     .recent-movies {
       display: flex;
       flex-wrap: wrap;
@@ -106,17 +123,48 @@
       box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
     }
 
+    /* Section des séries populaires */
+    .recent-series {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .series-card {
+      width: 200px;
+      height: 300px;
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .series-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .series-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 0, 255, 0.8);
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       h1 {
         font-size: 30px;
       }
 
-      .recent-movies {
+      .recent-movies, .recent-series {
         gap: 15px;
       }
 
-      .movie-card {
+      .movie-card, .series-card {
         width: 160px;
         height: 240px;
       }
@@ -137,7 +185,7 @@
         font-size: 16px;
       }
 
-      .movie-card {
+      .movie-card, .series-card {
         width: 140px;
         height: 210px;
       }
@@ -150,11 +198,11 @@
 
     /* Pour les TV et grands écrans */
     @media (min-width: 1200px) {
-      .recent-movies {
+      .recent-movies, .recent-series {
         gap: 40px;
       }
 
-      .movie-card {
+      .movie-card, .series-card {
         width: 300px;
         height: 450px;
       }
@@ -172,16 +220,14 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="container">
-    <div class="header">
+  <!-- En-tête avec logo et titre -->
+  <div class="header">
+    <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+    <div class="main-title">
       <h1>Bienvenue sur Yamonfilm</h1>
       <p>Le meilleur endroit pour regarder vos films et séries préférés en streaming, gratuitement et sans publicité. Rejoignez-nous et plongez dans un monde de divertissement sans limites !</p>
-      <div class="button-container">
-        <button class="button" onclick="window.location.href='film.html'">Voir les films</button>
-      </div>
     </div>
-  </div>
+    
 
   <!-- Films populaires -->
   <div class="container">
@@ -201,13 +247,37 @@
       <div class="movie-card" onclick="window.location.href='after 1.html'">
         <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 3">
       </div>
-
-      <!-- Card 4 -->
-      <div class="movie-card" onclick="window.location.href='film4.html'">
-        <img src="https://via.placeholder.com/200x300" alt="Film 4">
-      </div>
     </div>
   </div>
+  <div class="button-container">
+ <button class="button" onclick="window.location.href='explore-series.html'">Explorer les films</button>
+ </div>
+  </div>
+  <!-- Séries populaires -->
+  <div class="container">
+    <h2>Séries Populaires</h2>
+    <div class="recent-series">
+      <!-- Card 1 -->
+      <div class="series-card" onclick="window.location.href='series1.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Série 1">
+      </div>
 
+      <!-- Card 2 -->
+      <div class="series-card" onclick="window.location.href='series2.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Série 2">
+      </div>
+
+      <!-- Card 3 -->
+      <div class="series-card" onclick="window.location.href='series3.html'">
+        <img src="https://via.placeholder.com/200x300" alt="Série 3">
+      </div>
+
+      
+    </div>
+  </div>
+  <div class="button-container">
+ <button class="button" onclick="window.location.href='explore-series.html'">Explorer les séries</button>
+ </div>
+  </div>
 </body>
 </html>

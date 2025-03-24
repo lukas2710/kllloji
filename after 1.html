@@ -38,6 +38,40 @@
       margin: 0 auto;
     }
 
+    /* En-tête avec logo et navigation */
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; /* Espace entre logo et menu */
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    /* Agrandir le logo, mais de manière plus raisonnable */
+    .header img {
+      width: 250px; /* Taille du logo ajustée pour être bien visible */
+      height: auto;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #444;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #666;
+    }
+
     /* Titre du film */
     .movie-title {
       text-align: center;
@@ -152,7 +186,7 @@
     /* Grille des films similaires */
     .suggestions-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Films côte à côte */
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
       justify-items: center;
       direction: ltr; /* Grille de gauche à droite */
@@ -237,10 +271,19 @@
 
   <!-- Conteneur principal -->
   <div class="container">
+    <!-- En-tête avec logo et menu -->
+    <div class="header">
+      <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+      <div class="menu">
+        <a href="#">Films</a>
+        <a href="#">Séries</a>
+      </div>
+    </div>
 
     <!-- Titre du film -->
     <div class="movie-title">
       <h1>After</h1>
+      <p>Découvrez ce drame romantique qui suit une jeune étudiante et un garçon rebelle.</p>
     </div>
 
     <!-- Section de la description et de l'image du film -->
@@ -271,31 +314,4 @@
     <h2>Films similaires</h2>
     <div class="suggestions-container">
       <div class="suggested-movie">
-        <a href="movie1.html"> <!-- Lien vers une page du film -->
-          <img src="https://m.media-amazon.com/images/M/MV5BNDhkNzQ1MjgtNWM4MC00MjNjLWEyZmMtMTE3MjU3NTlmMmU1XkEyXkFqcGc@._V1_.jpg" alt="The Kissing Booth">
-        </a>
-        <h3>After - Chapitre 2</h3>
-      </div>
-      <div class="suggested-movie">
-        <a href="movie2.html"> <!-- Lien vers une autre page du film -->
-          <img src="https://image.tmdb.org/t/p/original/f6fDeReI4uoP5qJjS5X7a4KKANt.jpg" alt="To All the Boys I've Loved Before">
-        </a>
-        <h3>To All the Boys I've Loved Before</h3>
-      </div>
-      <div class="suggested-movie">
-        <a href="movie3.html">
-          <img src="https://image.tmdb.org/t/p/original/mrS3oNkfDxfk1BQ9VRodjfb82Eq.jpg" alt="Love, Rosie">
-        </a>
-        <h3>Love, Rosie</h3>
-      </div>
-      <div class="suggested-movie">
-        <a href="movie4.html">
-          <img src="https://image.tmdb.org/t/p/original/q1mBlFPRqHVsftApbdkM34qDrLO.jpg" alt="The Perfect Date">
-        </a>
-        <h3>The Perfect Date</h3>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
+        <a href="movie1.html">
