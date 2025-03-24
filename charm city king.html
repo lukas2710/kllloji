@@ -56,6 +56,42 @@
       line-height: 1.6;
     }
 
+    /* Section de la description et de l'image du film */
+    .movie-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    /* Image du film */
+    .movie-info img {
+      width: 300px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+    }
+
+    /* Description du film */
+    .movie-description {
+      max-width: 60%;
+      padding-left: 20px;
+    }
+
+    .movie-description h2 {
+      font-size: 24px;
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .movie-description p {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
     /* Lecteur vidéo */
     .video-container {
       position: relative;
@@ -65,6 +101,7 @@
       background-color: #000;
       border-radius: 10px;
       overflow: hidden;
+      margin-bottom: 20px;
     }
 
     .video-container iframe {
@@ -76,27 +113,8 @@
       border: none;
     }
 
-    /* Section des informations supplémentaires */
-    .info-container {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .info-container h2 {
-      font-size: 24px;
-      color: #00aaff;
-      margin-bottom: 10px;
-    }
-
-    .info-container p {
-      font-size: 16px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
     /* Bouton pour revenir à la page précédente */
     .back-button {
-      margin-top: 30px;
       text-align: center;
     }
 
@@ -117,19 +135,27 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .movie-title h1 {
-        font-size: 30px;
+      .movie-info {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .movie-title p {
-        font-size: 16px;
+      .movie-info img {
+        width: 80%;
+        height: auto;
       }
 
-      .info-container h2 {
+      .movie-description {
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .movie-description h2 {
         font-size: 20px;
       }
 
-      .info-container p {
+      .movie-description p {
         font-size: 14px;
       }
     }
@@ -141,14 +167,6 @@
 
       .movie-title p {
         font-size: 14px;
-      }
-
-      .info-container h2 {
-        font-size: 18px;
-      }
-
-      .info-container p {
-        font-size: 12px;
       }
 
       .back-button a {
@@ -165,20 +183,26 @@
 
     <!-- Titre du film -->
     <div class="movie-title">
-      <h1>Film: Charm City Kings</h1>
-      <p>Regardez maintenant le film "Charm City Kings" en streaming. Profitez de l'expérience sans publicité et plongez dans l'univers de ce film incroyable !</p>
+      <h1>Charm City Kings</h1>
+      
+    </div>
+
+    <!-- Section de la description et de l'image du film -->
+    <div class="movie-info">
+      <!-- Image du film -->
+      <img src="https://image.tmdb.org/t/p/original/9qp3fOzlUImJevdCJbAfl9A6yFI.jpg" alt="Charm City Kings">
+      
+      <!-- Description du film -->
+      <div class="movie-description">
+        <h2>À propos du film</h2>
+        <p>Charm City Kings est un drame intense qui se déroule dans les rues de Baltimore. Le film suit Mouse, un adolescent de 14 ans qui aspire à rejoindre une équipe légendaire de moto tout-terrain, mais qui se trouve confronté à des choix de vie difficiles et à des défis familiaux. Ce film explore des thèmes de camaraderie, de famille et de la lutte pour une meilleure vie.</p>
+      </div>
     </div>
 
     <!-- Lecteur vidéo -->
     <div class="video-container">
       <!-- Remplacez le lien par le lien de votre lecteur vidéo (YouTube, Vimeo, ou un lecteur personnalisé) -->
      <iframe src="https://luluvdo.com/e/cihkfm3yfgf5" scrolling="no" frameborder="0" width="640" height="360" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-    </div>
-
-    <!-- Informations supplémentaires -->
-    <div class="info-container">
-      <h2>À propos de ce film</h2>
-      <p>Charm City Kings est un drame américain qui raconte l'histoire de Mouse, un adolescent de Baltimore, qui rêve de rejoindre une équipe de moto tout-terrain légendaire. Un film captivant avec des thèmes de loyauté, de famille et de prise de décisions dans un environnement difficile.</p>
     </div>
 
     <!-- Bouton pour revenir à la page précédente -->
