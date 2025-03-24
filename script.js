@@ -6,12 +6,12 @@ const films = [
   
   // Films supplémentaires pour atteindre 10 000 films
   { name: "After chapitre 2", link: "film/drame/after 2.html", image: "https://m.media-amazon.com/images/M/MV5BNDhkNzQ1MjgtNWM4MC00MjNjLWEyZmMtMTE3MjU3NTlmMmU1XkEyXkFqcGc@._V1_.jpg", description: "After Chapitre 2 suit Tessa et Hardin alors qu'ils naviguent à travers les turbulences de leur relation amoureuse." },
-  { name: "Film 3", link: "film/drame/film3.html", image: "https://image.tmdb.org/t/p/original/film3.jpg", description: "Description du film 3." },
-  { name: "Film 4", link: "film/comedie/film4.html", image: "https://image.tmdb.org/t/p/original/film4.jpg", description: "Description du film 4." },
-  { name: "Film 5", link: "film/horeur/film5.html", image: "https://image.tmdb.org/t/p/original/film5.jpg", description: "Description du film 5." },
+  { name: "After chapitre 3", link: "film/drame/after 3.html", image: "https://fr.web.img6.acsta.net/pictures/21/09/28/11/52/4645987.jpg", description: "After Chapitre 3 continue de suivre Tessa et Hardin alors qu'ils tentent de trouver un équilibre dans leur relation tumultueuse." },
+  { name: "After chapitre 4", link: "film/drame/after 4.html", image: "https://fr.web.img4.acsta.net/pictures/22/09/06/09/09/1009418.jpg", description: "After Chapitre 4 poursuit l’histoire tumultueuse de Tessa et Hardin. " },
+  { name: "soda le reve americain", link: "film/comedie/soda le reve americain.html", image: "https://images.justwatch.com/poster/306072882/s718/soda-le-reve-americain.jpg", description: "Tout va mal pour Adam : il vient de rater son baccalauréat, ses amis Slimane et Ludovic s'apprêtent à prendre des routes différentes" },
   
   // Vous pouvez répéter ce format jusqu'à atteindre 10 000 films
-  { name: "Film 6", link: "film/action/film6.html", image: "https://image.tmdb.org/t/p/original/film6.jpg", description: "Description du film 6." },
+  { name: "Zootopie", link: "film/animation/zootopie.html", image: "https://fr.web.img3.acsta.net/pictures/15/12/11/14/34/280851.jpg", description: "Zootopie raconte l'histoire de Judy Hopps, une lapine ambitieuse qui rêve de devenir la première policière de Zootopie." },
   { name: "Film 7", link: "film/drame/film7.html", image: "https://image.tmdb.org/t/p/original/film7.jpg", description: "Description du film 7." },
   { name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." },
   

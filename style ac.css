@@ -120,10 +120,11 @@ body {
 }
 
 .suggestions div img {
-  width: 40px; /* Limite la largeur de l'image */
-  height: 40px; /* Limite la hauteur de l'image */
+  width: 50px; /* Ajuster la taille de l'image */
+  height: 50px; /* Taille carrée pour l'image */
   margin-right: 10px; /* Espacement entre l'image et le texte */
-  object-fit: cover; /* Maintient le ratio de l'image */
+  object-fit: cover; /* Maintient le ratio tout en remplissant le carré */
+  border-radius: 5px; /* Pour un bord arrondi si tu veux */
 }
 
 .suggestions div:hover {
