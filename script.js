@@ -12,9 +12,18 @@ const films = [
   
   // Vous pouvez répéter ce format jusqu'à atteindre 10 000 films
   { name: "Zootopie", link: "film/animation/zootopie.html", image: "https://fr.web.img3.acsta.net/pictures/15/12/11/14/34/280851.jpg", description: "Zootopie raconte l'histoire de Judy Hopps, une lapine ambitieuse qui rêve de devenir la première policière de Zootopie." },
-  { name: "Film 7", link: "film/drame/film7.html", image: "https://image.tmdb.org/t/p/original/film7.jpg", description: "Description du film 7." },
-  { name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." },
-  
+  { name: "Very bad trip 2", link: "film/comedie/Very bad trip 2.html", image: "https://fr.web.img6.acsta.net/medias/nmedia/18/82/09/89/19715770.jpg", description: "Les trois amis se retrouvent une fois de plus dans une situation folle lors d'un voyage à l'étranger." },
+  { name: "very bad trip", link: "film/comedie/very bad trip 1.html", image: "https://fr.web.img4.acsta.net/medias/nmedia/18/70/03/08/19109117.jpg", description: "Un groupe d'amis se réveille après une nuit de folie à Las Vegas, mais ils ne se souviennent de rien. Ils partent à la recherche de ce qu'il s'est passé." },
+   { name: "toy story", link: "film/animation/toy story.html", image: "https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", description: "Les jouets prennent vie lorsqu'ils sont laissés seuls. Suivez Woody, Buzz et leurs amis dans cette aventure inoubliable !" },
+{ name: "toy story 2", link: "film/animation/toy story 2.html", image: "https://www.ecranlarge.com/content/uploads/2020/08/ldosztevyoudrdo5nvoq4cq28al-131-scaled.jpg", description: "Woody, le cowboy, est volé par un collectionneur, et Buzz, Jessie et les autres amis de Woody se lancent dans une mission de sauvetage pour le ramener chez Andy" },
+{ name: "scary movie 5", link: "film/comedie/scary movie 5.html", image: "https://fr.web.img6.acsta.net/pictures/16/05/17/17/25/015640.jpg", description: "Un couple emménage dans une maison hantée, où des événements surnaturels se produisent. Ils doivent faire face à des esprits malveillants tout en essayant de sauver leur famille." },
+{ name: "la none 2", link: "film/horeur/la none 2.html", image: "https://img.filmsactu.net/datas/films/l/a/la-nonne/xl/la-nonne-6273e83b2cb69.jpg", description: "En 1956, la malédiction de la nonne Valak reprend vie dans une abbaye isolée en Roumanie. Un groupe de personnes est confronté à une force démoniaque qu'ils ne comprennent pas." },
+{ name: "scary movie", link: "film/comedie/scary movie.html", image: "https://fr.web.img2.acsta.net/medias/04/97/17/049717_af.jpg", description: "Un groupe d'adolescents est traqué par un tueur masqué après avoir accidentellement tué un homme dans un accident de voiture. Ils doivent échapper à cette menace tout en faisant face à des événements bizarres et des situations effrayantes." },
+{ name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." },
+{ name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." },
+{ name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." },
+{ name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." }, { name: "Film 8", link: "film/comedie/film8.html", image: "https://image.tmdb.org/t/p/original/film8.jpg", description: "Description du film 8." },
+
   // Ajoutez d'autres films ici pour arriver à 10 000
   // ...
   

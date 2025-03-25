@@ -199,14 +199,17 @@ button:hover {
 
 /* Films et Séries populaires */
 .recent-movies, .recent-series {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  display: grid; /* Utilisation de la grille */
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+  gap: 30px; /* Espacement entre les éléments */
   margin-top: 50px;
+  justify-items: center; /* Centrage des éléments */
 }
 
+/* Cartes de films et séries */
 .movie-card, .series-card {
-  width: 200px;
+  width: 100%; /* La carte prend toute la largeur de la cellule de la grille */
+  max-width: 200px; /* Limite la largeur des cartes */
   height: 300px;
   background-color: #222;
   border-radius: 10px;
