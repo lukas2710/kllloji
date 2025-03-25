@@ -201,22 +201,24 @@ button:hover {
 .recent-movies, .recent-series {
   display: grid; /* Utilisation de la grille */
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-  gap: 30px; /* Espacement entre les éléments */
+  gap: 20px; /* Espacement entre les éléments */
   margin-top: 50px;
   justify-items: center; /* Centrage des éléments */
+  padding: 0 10px;
 }
 
-/* Cartes de films et séries */
 .movie-card, .series-card {
   width: 100%; /* La carte prend toute la largeur de la cellule de la grille */
-  max-width: 200px; /* Limite la largeur des cartes */
-  height: 300px;
+  max-width: 250px; /* Limite la largeur des cartes */
+  height: auto; /* Hauteur auto pour s'adapter à l'image */
   background-color: #222;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .movie-card img, .series-card img {
@@ -275,11 +277,12 @@ body {
 
   .recent-movies, .recent-series {
     gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
   }
 
   .movie-card, .series-card {
-    width: 160px;
-    height: 240px;
+    max-width: 150px;
+    height: 220px;
   }
 
   button {
@@ -306,9 +309,14 @@ body {
     font-size: 16px;
   }
 
+  .recent-movies, .recent-series {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr); /* 1 colonne sur petit écran */
+  }
+
   .movie-card, .series-card {
-    width: 140px;
-    height: 210px;
+    max-width: 130px;
+    height: 200px;
   }
 
   button {
@@ -333,8 +341,8 @@ body {
   }
 
   .movie-card, .series-card {
-    width: 300px;
-    height: 450px;
+    width: 250px;
+    height: 375px;
   }
 
   h1 {
