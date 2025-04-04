@@ -1,3 +1,8 @@
+<?php
+// Activer les erreurs pour le débogage
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,15 +10,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil - Yamonfilm</title>
 
-  <!-- Lien vers Google Fonts pour une police moderne -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <!-- Lien vers le fichier CSS externe -->
+
+  <!-- Fichier CSS -->
   <link rel="stylesheet" href="style ac.css">
 </head>
 <body>
 
-  <!-- En-tête avec logo, titre et barre de recherche -->
+  <!-- En-tête -->
   <div class="header">
     <img src="img/logo.png" alt="Yamonfilm Logo">
     <div class="main-title">
@@ -28,39 +33,42 @@
     </div>
   </div>
 
-  <!-- Films populaires -->
+  <!-- Section Films récents -->
   <div class="container">
     <h2>Films Récemment Ajoutés</h2>
     <div class="recent-movies">
       <?php
-        $directory = 'film/';
-        $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
-        $files = [];
+      $directory = 'films/';
+      $recentFiles = [];
 
-        foreach ($rii as $file) {
-            if (!$file->isDir() && pathinfo($file, PATHINFO_EXTENSION) === 'html') {
-                $files[] = $file;
-            }
-        }
+      if (is_dir($directory)) {
+          $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
+          
+          foreach ($rii as $file) {
+              if (!$file->isDir() && pathinfo($file, PATHINFO_EXTENSION) === 'html') {
+                  $recentFiles[] = $file;
+              }
+          }
 
-        // Tri des fichiers par date de modification (du plus récent au plus ancien)
-        usort($files, function($a, $b) {
-            return filemtime($b) - filemtime($a);
-        });
+          usort($recentFiles, function($a, $b) {
+              return filemtime($b) - filemtime($a);
+          });
 
-        $recentFiles = array_slice($files, 0, 10);
+          $recentFiles = array_slice($recentFiles, 0, 10);
 
-        foreach ($recentFiles as $file) {
-            $path = $file->getPathname();
-            $url = str_replace('\\', '/', $path); // Compatibilité Windows/Linux
-            $filename = basename($path, '.html');
+          foreach ($recentFiles as $file) {
+              $path = $file->getPathname();
+              $url = str_replace('\\', '/', $path); // Compatibilité Windows
+              $filename = basename($path, '.html');
 
-            echo "
+              echo "
               <div class='movie-card' onclick=\"window.location.href='$url'\">
-                <img src='https://via.placeholder.com/200x300?text=" . urlencode($filename) . "' alt='$filename'>
-              </div>
-            ";
-        }
+                <img src='https://via.placeholder.com/200x300?text=" . urlencode($filename) . "' alt='" . htmlspecialchars($filename) . "'>
+              </div>";
+          }
+      } else {
+          echo "<p>⚠️ Le dossier 'films/' n'existe pas.</p>";
+      }
       ?>
     </div>
 
@@ -89,7 +97,7 @@
     </div>
   </div>
 
-  <!-- Lien vers le fichier JavaScript externe -->
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
