@@ -10,19 +10,17 @@
   
   <!-- Lien vers le fichier CSS externe -->
   <link rel="stylesheet" href="style ac.css">
-
 </head>
 <body>
 
   <!-- En-tête avec logo, titre et barre de recherche -->
   <div class="header">
-    <img src="img/logo.png" alt="Yamonfilm Logo"> <!-- Remplacez par votre logo -->
+    <img src="img/logo.png" alt="Yamonfilm Logo">
     <div class="main-title">
       <h1>Yamonfilm</h1>
-      <p></p>
     </div>
+
     <!-- Barre de recherche -->
-     <!-- Barre de recherche -->
     <div class="search-bar">
       <input type="text" id="search-input" placeholder="Rechercher un film..." oninput="showSuggestions()">
       <button onclick="searchMovie()">Rechercher</button>
@@ -32,23 +30,40 @@
 
   <!-- Films populaires -->
   <div class="container">
-    <h2>Films Populaires</h2>
+    <h2>Films Récemment Ajoutés</h2>
     <div class="recent-movies">
-      <!-- Card 1 -->
-      <div class="movie-card" onclick="window.location.href='film/action/charm city king.html'">
-        <img src="https://image.tmdb.org/t/p/original/9qp3fOzlUImJevdCJbAfl9A6yFI.jpg" alt="Charm city king">
-      </div>
+      <?php
+        $directory = 'film/';
+        $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
+        $files = [];
 
-      <!-- Card 2 -->
-      <div class="movie-card" onclick="window.location.href='film/horeur/the farm.html'">
-        <img src="https://fr.web.img5.acsta.net/pictures/18/10/24/15/18/1409655.jpg" alt="Film 2">
-      </div>
+        foreach ($rii as $file) {
+            if (!$file->isDir() && pathinfo($file, PATHINFO_EXTENSION) === 'html') {
+                $files[] = $file;
+            }
+        }
 
-      <!-- Card 3 -->
-      <div class="movie-card" onclick="window.location.href='film/drame/after 1.html'">
-        <img src="https://fr.web.img3.acsta.net/pictures/19/04/03/17/19/3475089.jpg" alt="Film 3">
-      </div>
+        // Tri des fichiers par date de modification (du plus récent au plus ancien)
+        usort($files, function($a, $b) {
+            return filemtime($b) - filemtime($a);
+        });
+
+        $recentFiles = array_slice($files, 0, 10);
+
+        foreach ($recentFiles as $file) {
+            $path = $file->getPathname();
+            $url = str_replace('\\', '/', $path); // Compatibilité Windows/Linux
+            $filename = basename($path, '.html');
+
+            echo "
+              <div class='movie-card' onclick=\"window.location.href='$url'\">
+                <img src='https://via.placeholder.com/200x300?text=" . urlencode($filename) . "' alt='$filename'>
+              </div>
+            ";
+        }
+      ?>
     </div>
+
     <div class="button-container">
       <button class="button" onclick="window.location.href='film.html'">Explorer les films</button>
     </div>
@@ -58,24 +73,16 @@
   <div class="container">
     <h2>Séries Populaires</h2>
     <div class="recent-series">
-      <!-- Card 1 -->
       <div class="series-card" onclick="window.location.href='series1.html'">
         <img src="https://via.placeholder.com/200x300" alt="Série 1">
       </div>
-
-      <!-- Card 2 -->
       <div class="series-card" onclick="window.location.href='series2.html'">
         <img src="https://via.placeholder.com/200x300" alt="Série 2">
       </div>
-
-      <!-- Card 3 -->
       <div class="series-card" onclick="window.location.href='series3.html'">
         <img src="https://via.placeholder.com/200x300" alt="Série 3">
       </div>
     </div>
-
-
-
 
     <div class="button-container">
       <button class="button" onclick="window.location.href='explore-series.html'">Explorer les séries</button>
